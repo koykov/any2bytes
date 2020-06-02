@@ -1,4 +1,4 @@
-package cbytealg
+package any2bytes
 
 import "errors"
 
