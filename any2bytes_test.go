@@ -15,6 +15,7 @@ var (
 	expectFltX = []byte("3.141592")
 )
 
+// Generic test function.
 func testA2B(t testing.TB) {
 	// bool to bytes
 	val = true
