@@ -1,11 +1,14 @@
 package any2bytes
 
+// Collection of conversion functions from builtin types, like int, float, ...
+
 import (
 	"strconv"
 
 	"github.com/koykov/fastconv"
 )
 
+// Convert from byte array.
 func BytesToBytes(dst []byte, val interface{}) ([]byte, error) {
 	switch val.(type) {
 	case *[]byte:
@@ -19,6 +22,7 @@ func BytesToBytes(dst []byte, val interface{}) ([]byte, error) {
 	return dst, nil
 }
 
+// Convert from string.
 func StrToBytes(dst []byte, val interface{}) ([]byte, error) {
 	switch val.(type) {
 	case *string:
@@ -32,6 +36,7 @@ func StrToBytes(dst []byte, val interface{}) ([]byte, error) {
 	return dst, nil
 }
 
+// Convert from boolean.
 func BoolToBytes(dst []byte, val interface{}) ([]byte, error) {
 	var b bool
 	switch val.(type) {
@@ -52,6 +57,7 @@ func BoolToBytes(dst []byte, val interface{}) ([]byte, error) {
 	return dst, nil
 }
 
+// Convert from int (including int8, int16, ...).
 func IntToBytes(dst []byte, val interface{}) ([]byte, error) {
 	var i int64
 	switch val.(type) {
@@ -83,6 +89,7 @@ func IntToBytes(dst []byte, val interface{}) ([]byte, error) {
 	return dst, nil
 }
 
+// Convert from uint (including uint8, uint16, ...).
 func UintToBytes(dst []byte, val interface{}) ([]byte, error) {
 	var i uint64
 	switch val.(type) {
@@ -114,6 +121,7 @@ func UintToBytes(dst []byte, val interface{}) ([]byte, error) {
 	return dst, nil
 }
 
+// Convert from float (32 and 64).
 func FloatToBytes(dst []byte, val interface{}) ([]byte, error) {
 	var f float64
 	switch val.(type) {
