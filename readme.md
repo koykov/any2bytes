@@ -2,6 +2,10 @@
 
 A collection of functions to convert to bytes. Allows to convert anything to bytes.
 
+Caution!
+
+Project is abandoned and renamed to [x2bytes](https://github.com/koykov/x2bytes).
+
 ## Usage
 
 ```go
